@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #fff;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #262626;
+    width: 250px;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.active {
+    left: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0px;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    padding: 10px 20px;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+ul li a:hover {
+    padding: 25px 20px;
+    transition: all 0.3s;
+    background-color: springgreen;
+    color: #000;
+}
+
+.sidebarBtn {
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.sidebarBtn span {
+    display: block;
+    width: 35px;
+    height: 3px;
+    background-color: #262626;
+    position: absolute;
+    top: 24px;
+    transition: 0.3s;
+}
+
+.sidebarBtn span:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #262626;
+    transition: 0.3s;
+}
+
+.sidebarBtn span:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #262626;
+    transition: 0.3s;
+}
+
+/* action */
+.sidebarBtn.toggle span {
+    background-color: transparent;
+}
+
+.sidebarBtn.toggle span:before {
+    top: 0;
+    transform: rotate(45deg);
+    background-color: indianred;
+}
+
+.sidebarBtn.toggle span:after {
+    top: 0;
+    transform: rotate(-45deg);
+    background-color: indianred;
+}
