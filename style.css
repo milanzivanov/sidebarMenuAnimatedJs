@@ -1,10 +1,13 @@
-body {
+body,
+html {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
     background-color: #fff;
     overflow: hidden;
     box-sizing: border-box;
+    height: 100%;
+    background-color: #ddd;
 }
 
 .sidebar {
@@ -17,13 +20,16 @@ body {
     transition: 0.3s;
 }
 
-.active {
-    left: 0;
-}
-
 ul {
     margin: 0;
     padding: 0px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.active {
+    left: 0;
 }
 
 ul li {
@@ -39,7 +45,7 @@ ul li a {
 }
 
 ul li a:hover {
-    padding: 25px 20px;
+    /* padding: 25px 20px; */
     transition: all 0.3s;
     background-color: springgreen;
     color: #000;
